@@ -96,7 +96,7 @@
           <p class="leading-normal text-xl xl:text-2xl mb-8">
             As a native Lincolnite, business owner, software engineer, property owner, teacher, mentor, lifelong learner, and parent, I am the different kind of leader we need in Lincoln.
           </p>
-          <form method="POST" action="https://formspree.io/f/mknpawpa">
+          <form method="POST"  onsubmit="return formOnSubmit(this);" id="hero-form" action="https://formspree.io/f/mknpawpa">
             <div class="grid grid-cols-6 gap-2">
 
               <div class="col-span-5">
@@ -221,7 +221,7 @@
       </h3>
         <div class="container max-w-xl mx-auto m-8 text-center">
 
-          <form method="POST" class="clear-right" action="https://formspree.io/f/mknpawpa">
+          <form method="POST" class="clear-right"  onsubmit="return formOnSubmit(this);" id="footer-form" action="https://formspree.io/f/mknpawpa">
             <div class="grid grid-cols-6 gap-2">
 
               <div class="col-span-6">
@@ -264,6 +264,32 @@
       </div>
     </footer>
     
+    <script type="text/javascript" src="/js/axios.min.js"></script>
+    <script type="text/javascript">
+
+      let formOnSubmit = function(el){        
+        var email_address = document.getElementById("email_address");
+        var zip_code = document.getElementById("postal-code");    
+        var which_form = el.id;
+
+        axios({
+          url: 'https://formspree.io/f/mknpawpa',
+          method: 'post',
+          headers: {
+            'Accept': 'application/json'
+          },
+          data: {
+            email_address: email_address.value,
+            postal-code: zip_code.value,
+            which_form: which_form
+          }
+        }).then((response) => { 
+          el.innerHTML = " Thank you for your support! ";
+          el.classList.add("text-2xl");
+        });
+        return false;
+      };
+    </script>
     <script>
       var scrollpos = window.scrollY;
       var header = document.getElementById("header");

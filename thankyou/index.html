@@ -172,6 +172,32 @@
       </div>
     </footer>
     
+    <script type="text/javascript" src="/js/axios.min.js"></script>
+    <script type="text/javascript">
+
+      let formOnSubmit = function(el){        
+        var email_address = document.getElementById("email_address");
+        var zip_code = document.getElementById("postal-code");    
+        var which_form = el.id;
+
+        axios({
+          url: 'https://formspree.io/f/mknpawpa',
+          method: 'post',
+          headers: {
+            'Accept': 'application/json'
+          },
+          data: {
+            email_address: email_address.value,
+            postal-code: zip_code.value,
+            which_form: which_form
+          }
+        }).then((response) => { 
+          el.innerHTML = " Thank you for your support! ";
+          el.classList.add("text-2xl");
+        });
+        return false;
+      };
+    </script>
     <script>
       var scrollpos = window.scrollY;
       var header = document.getElementById("header");
