@@ -23,13 +23,18 @@
         color:#002868;
       }
       .gradient_page {
-        background: linear-gradient(90deg, #002868 0%, rgba(0,0,0,0) 100%);
+           background: linear-gradient(180deg, #002868 0%, rgba(0,0,0,0) 50%, #002868 100%) ; 
       }
       .gradient {
         background: linear-gradient(90deg, #002868  100%, #BF0A30  100%);
       }
       .gradient_2 {
         background: linear-gradient(90deg, #BF0A30 0%, #002868 0%);
+      }
+      @media (min-width: 1024px) { 
+          .gradient_page{
+            background: linear-gradient(90deg, #002868 0%, rgba(0,0,0,0) 100%) ;
+          }
       }
     </style>
   </head>
