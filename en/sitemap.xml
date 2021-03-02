@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://burlingforlincoln.com/donate/</loc>
+  </url>
+  
+  <url>
+    <loc>http://burlingforlincoln.com/thankyou/</loc>
+  </url>
+  
+  <url>
+    <loc>http://burlingforlincoln.com/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://burlingforlincoln.com/vi/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://burlingforlincoln.com/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://burlingforlincoln.com/about-me/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://burlingforlincoln.com/vi/about-me/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://burlingforlincoln.com/about-me/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://burlingforlincoln.com/volunteer/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://burlingforlincoln.com/vi/volunteer/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://burlingforlincoln.com/volunteer/"
+                />
+  </url>
+  
+</urlset>
